@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Goldfinch\EditorConfig;
+namespace Goldfinch\EditorConfig;
 
 use SilverStripe\Control\Director;
 use SilverStripe\Core\Manifest\ModuleLoader;

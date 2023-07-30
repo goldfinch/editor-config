@@ -1,5 +1,5 @@
 <?php
 
-use App\Goldfinch\EditorConfig\TinyMCEConfigManager;
+use Goldfinch\EditorConfig\TinyMCEConfigManager;
 
 TinyMCEConfigManager::init();

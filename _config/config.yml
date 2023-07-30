@@ -4,4 +4,4 @@ Name: goldfinch-editor-config
 
 SilverStripe\Forms\HTMLEditor\HTMLEditorField:
   extensions:
-    - App\Goldfinch\EditorConfig\Extensions\HTMLEditorExtension
+    - Goldfinch\EditorConfig\Extensions\HTMLEditorExtension

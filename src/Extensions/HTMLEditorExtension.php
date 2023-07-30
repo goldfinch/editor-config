@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Goldfinch\EditorConfig\Extensions;
+namespace Goldfinch\EditorConfig\Extensions;
 
 use SilverStripe\Core\Extension;
 use SilverStripe\Control\Director;
