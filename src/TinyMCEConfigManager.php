@@ -389,7 +389,7 @@ class TinyMCEConfigManager
                 }
             ',
 
-            'paste_as_text' => true,
+            // 'paste_as_text' => true,
 
 
             // 'spellchecker_language' => 'en',
