@@ -266,9 +266,13 @@ class TinyMCEConfigManager
             ],
         ]);
 
+        // disallow div in basic cfg
+        $options = self::getDefaultOptions();
+        $options['valid_elements'] = str_replace('-div[id|dir|class|align|style],-span[class|align|style]', '', $options['valid_elements']);
+
         self::addCfg([
             'name' => 'basic',
-            'options' => [...self::getDefaultOptions(),
+            'options' => [...$options,
                 'contextmenu' => false,
                 'min_height'=> 300,
                 'height'=> 300,
