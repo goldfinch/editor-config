@@ -22,8 +22,8 @@ class TinyMCEConfigManager
         self::addCfg([
             'name' => 'expert',
             'options' => [...self::getDefaultOptions(),
-                'min_height'=> 600,
-                'height'=> 600,
+                'min_height'=> 650,
+                'height'=> 650,
                 'menubar' => 'file edit insert view format table tools help',
                 'importcss_append' => true,
                 'style_formats' => [
@@ -141,8 +141,8 @@ class TinyMCEConfigManager
         self::addCfg([
             'name' => 'advanced',
             'options' => [...self::getDefaultOptions(),
-                'min_height'=> 500,
-                'height'=> 500,
+                'min_height'=> 600,
+                'height'=> 600,
                 'importcss_append' => true,
                 'style_formats' => [
                   [ 'title' => 'Headings', 'items' => [
@@ -299,8 +299,8 @@ class TinyMCEConfigManager
             ],
         ]);
 
-        // reset default cms config to be basic
-        HTMLEditorConfig::set_config('cms', TinyMCEConfig::get('basic'));
+        // reset default cms config to be advanced
+        HTMLEditorConfig::set_config('cms', TinyMCEConfig::get('advanced'));
     }
 
     private static function addCfg($data)
