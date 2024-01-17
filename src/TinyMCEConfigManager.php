@@ -21,54 +21,64 @@ class TinyMCEConfigManager
 
         self::addCfg([
             'name' => 'expert',
-            'options' => [...self::getDefaultOptions(),
-                'min_height'=> 650,
-                'height'=> 650,
+            'options' => [
+                ...self::getDefaultOptions(),
+                'min_height' => 650,
+                'height' => 650,
                 'menubar' => 'file edit insert view format table tools help',
                 'importcss_append' => true,
                 'style_formats' => [
-                  [ 'title' => 'Headings', 'items' => [
-                          ['title' => 'Heading 1', 'block' => 'h1' ],
-                          ['title' => 'Heading 2', 'block' => 'h2' ],
-                          ['title' => 'Heading 3', 'block' => 'h3' ],
-                          ['title' => 'Heading 4', 'block' => 'h4' ],
-                          ['title' => 'Heading 5', 'block' => 'h5' ],
-                          ['title' => 'Heading 6', 'block' => 'h6' ],
-                          [
-                              'title'           => 'Subtitle',
-                              'selector'        => 'p',
-                              'classes'         => 'title-sub',
-                          ],
-                      ]
-                  ],
-                  [
-                      'title' => 'Misc Styles', 'items' => [
-                          [
-                              'title' => 'Style 1',
-                              'selector' => 'ul',
-                              'classes' => 'style1',
-                              'wrapper' => true,
-                              'merge_siblings' => false,
-                          ],
-                          [
-                              'title' => 'Button red',
-                              'inline' => 'span',
-                              'classes' => 'btn-red',
-                              'merge_siblings' => true,
-                          ],
-                      ]
-                  ],
+                    [
+                        'title' => 'Headings',
+                        'items' => [
+                            ['title' => 'Heading 1', 'block' => 'h1'],
+                            ['title' => 'Heading 2', 'block' => 'h2'],
+                            ['title' => 'Heading 3', 'block' => 'h3'],
+                            ['title' => 'Heading 4', 'block' => 'h4'],
+                            ['title' => 'Heading 5', 'block' => 'h5'],
+                            ['title' => 'Heading 6', 'block' => 'h6'],
+                            [
+                                'title' => 'Subtitle',
+                                'selector' => 'p',
+                                'classes' => 'title-sub',
+                            ],
+                        ],
+                    ],
+                    [
+                        'title' => 'Misc Styles',
+                        'items' => [
+                            [
+                                'title' => 'Style 1',
+                                'selector' => 'ul',
+                                'classes' => 'style1',
+                                'wrapper' => true,
+                                'merge_siblings' => false,
+                            ],
+                            [
+                                'title' => 'Button red',
+                                'inline' => 'span',
+                                'classes' => 'btn-red',
+                                'merge_siblings' => true,
+                            ],
+                        ],
+                    ],
                 ],
-                'font_size_formats' => '10px 12px 14px 16px 18px 20px 22px 24px 26px 28px 30px 32px',
-                'font_family_formats' => 'Arial=arial,helvetica,sans-serif; Courier New=courier new,courier,monospace; AkrutiKndPadmini=Akpdmi-n',
+                'font_size_formats' =>
+                    '10px 12px 14px 16px 18px 20px 22px 24px 26px 28px 30px 32px',
+                'font_family_formats' =>
+                    'Arial=arial,helvetica,sans-serif; Courier New=courier new,courier,monospace; AkrutiKndPadmini=Akpdmi-n',
                 'color_map' => [
-                  '000000', 'Black',
-                  '808080', 'Gray',
-                  'FFFFFF', 'White',
+                    '000000',
+                    'Black',
+                    '808080',
+                    'Gray',
+                    'FFFFFF',
+                    'White',
                 ],
                 // 'custom_colors' => false,
             ],
-            'plugins' => [...self::getDefaultPlugins(),
+            'plugins' => [
+                ...self::getDefaultPlugins(),
                 'fullscreen',
                 'charmap',
                 'codesample',
@@ -134,52 +144,58 @@ class TinyMCEConfigManager
                     'template',
                     'nonbreaking',
                     'help',
-                ]
+                ],
             ],
         ]);
 
         self::addCfg([
             'name' => 'advanced',
-            'options' => [...self::getDefaultOptions(),
-                'min_height'=> 600,
-                'height'=> 600,
+            'options' => [
+                ...self::getDefaultOptions(),
+                'min_height' => 600,
+                'height' => 600,
                 'importcss_append' => true,
                 'style_formats' => [
-                  [ 'title' => 'Headings', 'items' => [
-                          ['title' => 'Heading 1', 'block' => 'h1' ],
-                          ['title' => 'Heading 2', 'block' => 'h2' ],
-                          ['title' => 'Heading 3', 'block' => 'h3' ],
-                          ['title' => 'Heading 4', 'block' => 'h4' ],
-                          ['title' => 'Heading 5', 'block' => 'h5' ],
-                          ['title' => 'Heading 6', 'block' => 'h6' ],
-                          [
-                              'title'           => 'Subtitle',
-                              'selector'        => 'p',
-                              'classes'         => 'title-sub',
-                          ],
-                      ]
-                  ],
-                  [
-                      'title' => 'Misc Styles', 'items' => [
-                          [
-                              'title' => 'Style 1',
-                              'selector' => 'ul',
-                              'classes' => 'style1',
-                              'wrapper' => true,
-                              'merge_siblings' => false,
-                          ],
-                          [
-                              'title' => 'Button red',
-                              'inline' => 'span',
-                              'classes' => 'btn-red',
-                              'merge_siblings' => true,
-                          ],
-                      ]
-                  ],
+                    [
+                        'title' => 'Headings',
+                        'items' => [
+                            ['title' => 'Heading 1', 'block' => 'h1'],
+                            ['title' => 'Heading 2', 'block' => 'h2'],
+                            ['title' => 'Heading 3', 'block' => 'h3'],
+                            ['title' => 'Heading 4', 'block' => 'h4'],
+                            ['title' => 'Heading 5', 'block' => 'h5'],
+                            ['title' => 'Heading 6', 'block' => 'h6'],
+                            [
+                                'title' => 'Subtitle',
+                                'selector' => 'p',
+                                'classes' => 'title-sub',
+                            ],
+                        ],
+                    ],
+                    [
+                        'title' => 'Misc Styles',
+                        'items' => [
+                            [
+                                'title' => 'Style 1',
+                                'selector' => 'ul',
+                                'classes' => 'style1',
+                                'wrapper' => true,
+                                'merge_siblings' => false,
+                            ],
+                            [
+                                'title' => 'Button red',
+                                'inline' => 'span',
+                                'classes' => 'btn-red',
+                                'merge_siblings' => true,
+                            ],
+                        ],
+                    ],
                 ],
-                'font_size_formats' => '10px 12px 14px 16px 18px 20px 22px 24px 26px 28px 30px 32px',
+                'font_size_formats' =>
+                    '10px 12px 14px 16px 18px 20px 22px 24px 26px 28px 30px 32px',
             ],
-            'plugins' => [...self::getDefaultPlugins(),
+            'plugins' => [
+                ...self::getDefaultPlugins(),
                 'fullscreen',
                 'charmap',
                 'codesample',
@@ -230,19 +246,18 @@ class TinyMCEConfigManager
                     'preview',
                     'fullscreen',
                     'code',
-                ]
+                ],
             ],
         ]);
 
         self::addCfg([
             'name' => 'intermediate',
-            'options' => [...self::getDefaultOptions(),
-                'min_height'=> 400,
-                'height'=> 400,
+            'options' => [
+                ...self::getDefaultOptions(),
+                'min_height' => 400,
+                'height' => 400,
             ],
-            'plugins' => [...self::getDefaultPlugins(),
-                'charmap',
-            ],
+            'plugins' => [...self::getDefaultPlugins(), 'charmap'],
             'buttons' => [
                 [
                     'bold',
@@ -268,18 +283,21 @@ class TinyMCEConfigManager
 
         // disallow div in basic cfg
         $options = self::getDefaultOptions();
-        $options['valid_elements'] = str_replace('-div[id|dir|class|align|style],-span[class|align|style]', '', $options['valid_elements']);
+        $options['valid_elements'] = str_replace(
+            '-div[id|dir|class|align|style],-span[class|align|style]',
+            '',
+            $options['valid_elements'],
+        );
 
         self::addCfg([
             'name' => 'basic',
-            'options' => [...$options,
+            'options' => [
+                ...$options,
                 'contextmenu' => false,
-                'min_height'=> 300,
-                'height'=> 300,
+                'min_height' => 300,
+                'height' => 300,
             ],
-            'plugins' => [...self::getDefaultPlugins(),
-                'charmap',
-            ],
+            'plugins' => [...self::getDefaultPlugins(), 'charmap'],
             'buttons' => [
                 [
                     'bold',
@@ -307,20 +325,16 @@ class TinyMCEConfigManager
     {
         $tiny = TinyMCEConfig::get($data['name']);
 
-        if (isset($data['options']))
-        {
+        if (isset($data['options'])) {
             $tiny->setOptions($data['options']);
         }
 
-        if (isset($data['plugins']))
-        {
+        if (isset($data['plugins'])) {
             $tiny->enablePlugins($data['plugins']);
         }
 
-        if (isset($data['buttons']))
-        {
-            foreach($data['buttons'] as $key => $buttons)
-            {
+        if (isset($data['buttons'])) {
+            foreach ($data['buttons'] as $key => $buttons) {
                 $line = $key + 1;
                 $tiny->setButtonsForLine($line, $buttons);
             }
@@ -328,8 +342,7 @@ class TinyMCEConfigManager
 
         // $tiny->setContentCSS(['/editor.css']);
 
-        if ($data['name'] == 'advanced')
-        {
+        if ($data['name'] == 'advanced') {
             // dd('advanced', $tiny->getOption('style_formats'));
             // dd('advanced', $tiny->getPlugins());
         }
@@ -337,21 +350,43 @@ class TinyMCEConfigManager
 
     private static function getDefaultPlugins()
     {
-        $silverstripe_admin_module = ModuleLoader::inst()->getManifest()->getModule('silverstripe/admin');
-        $silverstripe_asset_admin = ModuleLoader::inst()->getManifest()->getModule('silverstripe/asset-admin');
-        $silverstripe_cms = ModuleLoader::inst()->getManifest()->getModule('silverstripe/cms');
+        $silverstripe_admin_module = ModuleLoader::inst()
+            ->getManifest()
+            ->getModule('silverstripe/admin');
+        $silverstripe_asset_admin = ModuleLoader::inst()
+            ->getManifest()
+            ->getModule('silverstripe/asset-admin');
+        $silverstripe_cms = ModuleLoader::inst()
+            ->getManifest()
+            ->getModule('silverstripe/cms');
 
         return [
             'image' => null,
             'anchor' => null,
-            'sslink' => $silverstripe_admin_module->getResource('client/dist/js/TinyMCE_sslink.js'),
-            'sslinkexternal' => $silverstripe_admin_module->getResource('client/dist/js/TinyMCE_sslink-external.js'),
-            'sslinkemail' => $silverstripe_admin_module->getResource('client/dist/js/TinyMCE_sslink-email.js'),
-            'sslinkinternal' => $silverstripe_cms->getResource('client/dist/js/TinyMCE_sslink-internal.js'),
-            'sslinkanchor' => $silverstripe_cms->getResource('client/dist/js/TinyMCE_sslink-anchor.js'),
-            'ssmedia' => $silverstripe_asset_admin->getResource('client/dist/js/TinyMCE_ssmedia.js'),
-            'ssembed' => $silverstripe_asset_admin->getResource('client/dist/js/TinyMCE_ssembed.js'),
-            'sslinkfile' => $silverstripe_asset_admin->getResource('client/dist/js/TinyMCE_sslink-file.js'),
+            'sslink' => $silverstripe_admin_module->getResource(
+                'client/dist/js/TinyMCE_sslink.js',
+            ),
+            'sslinkexternal' => $silverstripe_admin_module->getResource(
+                'client/dist/js/TinyMCE_sslink-external.js',
+            ),
+            'sslinkemail' => $silverstripe_admin_module->getResource(
+                'client/dist/js/TinyMCE_sslink-email.js',
+            ),
+            'sslinkinternal' => $silverstripe_cms->getResource(
+                'client/dist/js/TinyMCE_sslink-internal.js',
+            ),
+            'sslinkanchor' => $silverstripe_cms->getResource(
+                'client/dist/js/TinyMCE_sslink-anchor.js',
+            ),
+            'ssmedia' => $silverstripe_asset_admin->getResource(
+                'client/dist/js/TinyMCE_ssmedia.js',
+            ),
+            'ssembed' => $silverstripe_asset_admin->getResource(
+                'client/dist/js/TinyMCE_ssembed.js',
+            ),
+            'sslinkfile' => $silverstripe_asset_admin->getResource(
+                'client/dist/js/TinyMCE_sslink-file.js',
+            ),
         ];
     }
 
@@ -366,8 +401,12 @@ class TinyMCEConfigManager
             'body_class' => $cms->getOption('body_class'),
             'contextmenu' => $cms->getOption('contextmenu'),
             'use_native_selects' => $cms->getOption('use_native_selects'),
-            'valid_elements' => $cms->getOption('valid_elements') . '|gf-component[data-id,data-class,class]',
-            'extended_valid_elements' => $cms->getOption('extended_valid_elements') . '|gf-component[data-id,data-class,class]',
+            'valid_elements' =>
+                $cms->getOption('valid_elements') .
+                '|gf-component[data-id,data-class,class]',
+            'extended_valid_elements' =>
+                $cms->getOption('extended_valid_elements') .
+                '|gf-component[data-id,data-class,class]',
             'custom_elements' => 'gf-component',
             'noneditable_class' => 'gf-component',
             'content_style' => '
@@ -395,7 +434,6 @@ class TinyMCEConfigManager
 
             // 'paste_as_text' => true,
 
-
             // 'spellchecker_language' => 'en',
             // 'inline' => true,
             // 'toolbar' => false,
@@ -406,7 +444,6 @@ class TinyMCEConfigManager
             // 'powerpaste_html_import' => 'clean',
             // 'quickbars_insert_toolbar'=> true,
             // 'quickbars_selection_toolbar' => false,
-
 
             // 'importcss_append' => true,
             // 'style_formats_merge' => true,
@@ -450,19 +487,21 @@ class TinyMCEConfigManager
     {
         // -- Dev playground config
 
-        if (Director::isDev())
-        {
+        if (Director::isDev()) {
             self::addCfg([
                 'name' => 'dev',
-                'options' => [...self::getDefaultOptions(),
-                    'menubar' => 'file edit insert view format table tools help',
+                'options' => [
+                    ...self::getDefaultOptions(),
+                    'menubar' =>
+                        'file edit insert view format table tools help',
                     // 'block_formats' => 'Paragraph=p; Header 1=h1; Header 2=h2; Header 3=h3',
                     'elementpath' => true,
                     // 'font_formats' =>  'Arial=arial,helvetica,sans-serif; Courier New=courier new,courier,monospace; AkrutiKndPadmini=Akpdmi-n',
-                    'fontsize_formats' => '11pt 10pt 12pt 14pt 16pt 18pt 24pt 36pt 48pt',
+                    'fontsize_formats' =>
+                        '11pt 10pt 12pt 14pt 16pt 18pt 24pt 36pt 48pt',
                     'height' => 800,
-                    'min_height'=> 800,
-                    'max_height'=> 2000,
+                    'min_height' => 800,
+                    'max_height' => 2000,
                     'lineheight_formats' => '1 1.1 1.2 1.3 1.4 1.5 2',
                     'placeholder' => 'Tyoe here..',
 
@@ -509,7 +548,8 @@ class TinyMCEConfigManager
                     //   ]
                     // ],
                 ],
-                'plugins' => [...self::getDefaultPlugins(),
+                'plugins' => [
+                    ...self::getDefaultPlugins(),
                     // 'accordion',
                     'autosave',
                     'charmap',
@@ -530,21 +570,53 @@ class TinyMCEConfigManager
                 ],
                 'buttons' => [
                     [
-                        'bold', 'italic', 'underline', 'removeformat', '|',
-                        'alignleft', 'aligncenter', 'alignright', 'alignjustify', '|',
-                        'bullist', 'numlist', 'outdent', 'indent',
+                        'bold',
+                        'italic',
+                        'underline',
+                        'removeformat',
+                        '|',
+                        'alignleft',
+                        'aligncenter',
+                        'alignright',
+                        'alignjustify',
+                        '|',
+                        'bullist',
+                        'numlist',
+                        'outdent',
+                        'indent',
                     ],
                     [
-                        'blocks', '|',
-                        'pastetext', '|',
-                        'table', 'ssmedia', 'ssembed', 'sslink', 'anchor', 'unlink', '|',
-                        'code', 'visualblocks'
+                        'blocks',
+                        '|',
+                        'pastetext',
+                        '|',
+                        'table',
+                        'ssmedia',
+                        'ssembed',
+                        'sslink',
+                        'anchor',
+                        'unlink',
+                        '|',
+                        'code',
+                        'visualblocks',
                     ],
                     [
-                        'image', 'strikethrough', 'forecolor', 'hilitecolor', 'fontname', 'fontsize', 'blockquote', 'p'
+                        'image',
+                        'strikethrough',
+                        'forecolor',
+                        'hilitecolor',
+                        'fontname',
+                        'fontsize',
+                        'blockquote',
+                        'p',
                     ],
                     [
-                        'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+                        'h1',
+                        'h2',
+                        'h3',
+                        'h4',
+                        'h5',
+                        'h6',
                         'div',
                         'address',
                         'pre',
@@ -576,10 +648,164 @@ class TinyMCEConfigManager
                         'lineheight',
                     ],
 
-
                     [
-                      'aligncenter', 'alignjustify', 'alignleft', 'alignnone', 'alignright|', 'anchor', '|', 'blockquote', 'blocks', '|', 'backcolor', '|', 'bold', '|', 'copy', '|', 'cut', '|', 'fontfamily', 'fontsize', 'forecolor', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr', 'indent', '|', 'italic', '|', 'language', '|', 'lineheight', '|', 'newdocument', '|', 'outdent', '|', 'paste', 'pastetext', '|', 'print', '|', 'redo', '|', 'remove', 'removeformat', '|', 'selectall', '|', 'strikethrough', '|', 'styles', '|', 'subscript', 'superscript', 'underline', '|', 'undo', '|', 'visualaid', '|', 'a11ycheck', 'advtablerownumbering', 'typopgraphy', 'anchor', 'restoredraft', 'casechange', 'charmap', 'checklist', 'code', 'codesample', 'addcomment', 'showcomments', 'ltr', 'rtl', 'editimage', 'fliph', 'flipv', 'imageoptions', 'rotateleft', 'rotateright', 'emoticons', 'export', 'footnotes', 'footnotesupdate', 'formatpainter', 'fullscreen', 'help', 'image', 'insertdatetime', 'link', 'openlink', 'unlink', 'bullist', 'numlist', 'media', 'mergetags', 'mergetags_list', 'nonbreaking', 'pagebreak', 'pageembed', 'permanentpen', 'preview', 'quickimage', 'quicklink', 'quicktable', 'cancel', 'save', 'searchreplace', 'spellcheckdialog', 'spellchecker', '|', 'table', 'tablecellprops', 'tablecopyrow', 'tablecutrow', 'tabledelete', 'tabledeletecol', 'tabledeleterow', 'tableinsertdialog', 'tableinsertcolafter', 'tableinsertcolbefore', 'tableinsertrowafter', 'tableinsertrowbefore', 'tablemergecells', 'tablepasterowafter', 'tablepasterowbefore', 'tableprops', 'tablerowprops', 'tablesplitcells', 'tableclass', 'tablecellclass', 'tablecellvalign', 'tablecellborderwidth', 'tablecellborderstyle', 'tablecaption', 'tablecellbackgroundcolor', 'tablecellbordercolor', 'tablerowheader', 'tablecolheader', '|', 'tableofcontents', 'tableofcontentsupdate', '|', 'template', 'typography', '|', 'insertfile', '|', 'visualblocks', 'visualchars', '|', 'wordcount'
-                    ]
+                        'aligncenter',
+                        'alignjustify',
+                        'alignleft',
+                        'alignnone',
+                        'alignright|',
+                        'anchor',
+                        '|',
+                        'blockquote',
+                        'blocks',
+                        '|',
+                        'backcolor',
+                        '|',
+                        'bold',
+                        '|',
+                        'copy',
+                        '|',
+                        'cut',
+                        '|',
+                        'fontfamily',
+                        'fontsize',
+                        'forecolor',
+                        'h1',
+                        'h2',
+                        'h3',
+                        'h4',
+                        'h5',
+                        'h6',
+                        'hr',
+                        'indent',
+                        '|',
+                        'italic',
+                        '|',
+                        'language',
+                        '|',
+                        'lineheight',
+                        '|',
+                        'newdocument',
+                        '|',
+                        'outdent',
+                        '|',
+                        'paste',
+                        'pastetext',
+                        '|',
+                        'print',
+                        '|',
+                        'redo',
+                        '|',
+                        'remove',
+                        'removeformat',
+                        '|',
+                        'selectall',
+                        '|',
+                        'strikethrough',
+                        '|',
+                        'styles',
+                        '|',
+                        'subscript',
+                        'superscript',
+                        'underline',
+                        '|',
+                        'undo',
+                        '|',
+                        'visualaid',
+                        '|',
+                        'a11ycheck',
+                        'advtablerownumbering',
+                        'typopgraphy',
+                        'anchor',
+                        'restoredraft',
+                        'casechange',
+                        'charmap',
+                        'checklist',
+                        'code',
+                        'codesample',
+                        'addcomment',
+                        'showcomments',
+                        'ltr',
+                        'rtl',
+                        'editimage',
+                        'fliph',
+                        'flipv',
+                        'imageoptions',
+                        'rotateleft',
+                        'rotateright',
+                        'emoticons',
+                        'export',
+                        'footnotes',
+                        'footnotesupdate',
+                        'formatpainter',
+                        'fullscreen',
+                        'help',
+                        'image',
+                        'insertdatetime',
+                        'link',
+                        'openlink',
+                        'unlink',
+                        'bullist',
+                        'numlist',
+                        'media',
+                        'mergetags',
+                        'mergetags_list',
+                        'nonbreaking',
+                        'pagebreak',
+                        'pageembed',
+                        'permanentpen',
+                        'preview',
+                        'quickimage',
+                        'quicklink',
+                        'quicktable',
+                        'cancel',
+                        'save',
+                        'searchreplace',
+                        'spellcheckdialog',
+                        'spellchecker',
+                        '|',
+                        'table',
+                        'tablecellprops',
+                        'tablecopyrow',
+                        'tablecutrow',
+                        'tabledelete',
+                        'tabledeletecol',
+                        'tabledeleterow',
+                        'tableinsertdialog',
+                        'tableinsertcolafter',
+                        'tableinsertcolbefore',
+                        'tableinsertrowafter',
+                        'tableinsertrowbefore',
+                        'tablemergecells',
+                        'tablepasterowafter',
+                        'tablepasterowbefore',
+                        'tableprops',
+                        'tablerowprops',
+                        'tablesplitcells',
+                        'tableclass',
+                        'tablecellclass',
+                        'tablecellvalign',
+                        'tablecellborderwidth',
+                        'tablecellborderstyle',
+                        'tablecaption',
+                        'tablecellbackgroundcolor',
+                        'tablecellbordercolor',
+                        'tablerowheader',
+                        'tablecolheader',
+                        '|',
+                        'tableofcontents',
+                        'tableofcontentsupdate',
+                        '|',
+                        'template',
+                        'typography',
+                        '|',
+                        'insertfile',
+                        '|',
+                        'visualblocks',
+                        'visualchars',
+                        '|',
+                        'wordcount',
+                    ],
                 ],
             ]);
         }

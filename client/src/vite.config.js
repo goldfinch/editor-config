@@ -1,16 +1,14 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import autoprefixer from "autoprefixer";
+import autoprefixer from 'autoprefixer';
 // import initCfg from './app.config.js'
 
 export default defineConfig(({ command, mode, ssrBuild }) => {
-
   // const cfg = initCfg(command, mode, ssrBuild)
 
   return {
-
     resolve: {
-        alias: {}
+      alias: {},
     },
 
     build: {
@@ -23,23 +21,22 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
           chunkFileNames: `js/[name]-[hash].js`,
           assetFileNames: (assetInfo) => {
             if (assetInfo.name.endsWith('.css')) {
-              return '[name][extname]'
+              return '[name][extname]';
             } else if (
               assetInfo.name.match(/(\.(woff2?|eot|ttf|otf)|font\.svg)(\?.*)?$/)
             ) {
-              return 'fonts/[name][extname]'
+              return 'fonts/[name][extname]';
             } else if (assetInfo.name.match(/\.(jpg|png|svg)$/)) {
-              return 'images/[name][extname]'
+              return 'images/[name][extname]';
             }
 
-            return 'js/[name][extname]'
+            return 'js/[name][extname]';
           },
-        }
-      }
+        },
+      },
     },
 
     plugins: [
-
       laravel({
         input: [
           // 'src/bootstrap-icons.scss',
@@ -47,17 +44,12 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
         refresh: true,
         // buildDirectory: '',
       }),
-
     ],
 
     css: {
-
       postcss: {
-        plugins: [
-          autoprefixer,
-        ],
-      }
+        plugins: [autoprefixer],
+      },
     },
-  }
-
+  };
 });

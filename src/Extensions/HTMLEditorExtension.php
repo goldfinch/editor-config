@@ -10,20 +10,20 @@ class HTMLEditorExtension extends Extension
     {
         $config = $this->owner->config();
 
-        $basedOnClass = $field->getForm()->getRecord()->getClassName();
+        $basedOnClass = $field
+            ->getForm()
+            ->getRecord()
+            ->getClassName();
 
         $configs = $config->get('registered_configs');
 
-        if (isset($configs[$basedOnClass]))
-        {
+        if (isset($configs[$basedOnClass])) {
             $object = $configs[$basedOnClass];
 
-            if (isset($object[$field->getName()]))
-            {
+            if (isset($object[$field->getName()])) {
                 $cfgName = $object[$field->getName()];
                 $field->setEditorConfig($cfgName);
             }
         }
     }
 }
-
